@@ -21,7 +21,7 @@ export default function ListaGithub() {
         ))}
       </ul>
 
-      <button onClick={() => setPagina((prev) => Math.max(prev - 1, 1))}>Anterior</button>
+      <button disabled={pagina === 1} onClick={() => setPagina((prev) => Math.max(prev - 1, 1))} style={{ opacity: pagina === 1 ? 0.5 : 1 }}>Anterior</button>
       <span style={{ margin: '0 1rem' }}>Página {pagina}</span>
       <button onClick={() => setPagina((prev) => prev + 1)}>Próxima</button>
     </div>
